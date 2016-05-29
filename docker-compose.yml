@@ -1,0 +1,7 @@
+version: '2'
+services:
+  ergodoxcompiler:
+    build: .
+    volumes:
+      - ./qmk_firmware:/data
+    command: /bin/bash -c 'cd /data/keyboard/ergodox_ez && make clean && make KEYMAP=adinauer'
