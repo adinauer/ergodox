@@ -4,5 +4,5 @@ services:
     build: .
     volumes:
       - ./qmk_firmware:/data
-      - ./adinauer_keymap:/data/keyboard/ergodox_ez/keymaps/adinauer
-    command: /bin/bash -c 'cd /data/keyboard/ergodox_ez && make clean && make KEYMAP=adinauer && cp /data/keyboard/ergodox_ez/ergodox_ez.hex /data/keyboard/ergodox_ez/keymaps/adinauer/adinauer.hex'
+      - ./adinauer_keymap:/data/keyboards/ergodox/ez/keymaps/adinauer
+    command: /bin/bash -c 'cd /data/keyboards/ergodox/ez && make clean && make KEYMAP=adinauer && ls -lah /data/.build/ && cp /data/.build/ergodox_ez_adinauer.hex /data/keyboards/ergodox/ez/keymaps/adinauer/adinauer.hex'
